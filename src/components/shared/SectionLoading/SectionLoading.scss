@@ -1,0 +1,14 @@
+.details-section__loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 630px;
+  width: 100%;
+  img {
+    width: 100px;
+    height: 100px;
+  }
+  @media (max-width:$md3+px){
+    height: 600px;
+  }
+}
