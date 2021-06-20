@@ -1,0 +1,40 @@
+.loading-logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background-color: #fff;
+
+    img {
+        display: block;
+        width: 300px;
+        height: 200px;
+        animation: scaling 1.5s infinite;
+    }
+
+    @media (max-width:$md4+px) {
+        img {
+            width: 180px;
+            height: 120px;
+        }
+    }
+}
+
+@keyframes scaling {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
