@@ -1,0 +1,25 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__item {
+        display: block;
+        color: black;
+        background-color: white;
+        font-weight: 400;
+        font-size: 22px;
+        margin: 10px;
+        padding: 5px;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            color: red;
+        }
+
+        &_active {
+            font-weight: 900;
+        }
+    }
+}
