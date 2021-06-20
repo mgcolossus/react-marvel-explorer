@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+@import "./styles/screenSizes";
+
+@import "./components/Header/Header.scss";
+@import "./components/NotFoundPage/NotFoundPage.scss";
+
+@import "./components/shared/Pagination/Pagination.scss";
+@import "./components/shared/ErrorBlock/ErrorBlock.scss";
+
+@import "./components/shared/LoadingLogo/LoadingLogo.scss";
+@import "./components/shared/SectionLoading/SectionLoading.scss";
+
+@import "./styles/page";
+@import "./styles/details";
+@import "./styles/card";
+
+@import "./components/StoriesPage/StoriesPage.scss";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+body.lock {
+	overflow: hidden;
+}
+
+
+.container {
+	max-width: $mw + px;
+	margin: 0 auto;
+	width: 100%;
+
+	@media (max-width: $md1+px) {
+		max-width: 970px;
+	}
+
+	@media (max-width: $md2+px) {
+		max-width: 750px;
+	}
+
+	@media (max-width: $md3+px) {
+		max-width: none;
+		padding: 0 10px;
+	}
+}
