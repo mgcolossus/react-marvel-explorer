@@ -1,0 +1,8 @@
+.error-block {
+    display: flex;
+    margin: 20px 0px 0px 0px;
+    justify-content: center;
+    &__text {
+        font-size: 36px;
+    }
+}
