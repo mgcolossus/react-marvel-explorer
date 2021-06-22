@@ -1,11 +1,11 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: path.resolve(__dirname, "..", "./src/index.tsx"),
   resolve: {
-    extensions: [".tsx", ".ts", ".js"],
+    extensions: [".tsx", ".ts", ".js"]
   },
   module: {
     rules: [
@@ -14,32 +14,32 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: "babel-loader",
-          },
-        ],
+            loader: "babel-loader"
+          }
+        ]
       },
       {
         test: /\.scss$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
       },
       {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
         type: "asset/resource",
         generator: {
-          filename: 'static/media/[name][hash][ext]',
-        },
+          filename: "static/media/[name][hash][ext]"
+        }
       },
       {
         test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
-        type: "asset/inline",
-      },
-    ],
+        type: "asset/inline"
+      }
+    ]
   },
   output: {
     path: path.resolve(__dirname, "..", "./build"),
-    publicPath: '/',
+    publicPath: "/",
     filename: "bundle.js",
-    clean: true,
+    clean: true
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -50,5 +50,5 @@ module.exports = {
       filename: "static/styles/[name][contenthash:8].css"
     })
   ],
-  stats: "errors-only",
+  stats: "errors-only"
 };
